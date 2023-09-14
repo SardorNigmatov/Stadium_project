@@ -22,9 +22,10 @@ class BronSerializers(ModelSerializer):
 
 
 
-# class BrondDelSerilaizer(serializers.ModelSerializer):
+# class BrondDelSerilaizer(ModelSerializer):
 #     class Meta:
 #         model = BronModel
 #         fields = ('stadion_id','first_name','last_name','phone_number','date','begin_time','end_time','is_broned')
         
-#     def delete(self, validat_data):
+#     # def delete(self, validat_data):
+        
