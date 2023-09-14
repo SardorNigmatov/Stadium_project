@@ -29,4 +29,13 @@ class DeleteStadiumsView(DestroyAPIView):
     # permission_classes = (IsAuthenticated,)
 
 
+from .models import BronModel
+from rest_framework.generics import CreateAPIView
+from .serializers import BronSerializers
+
+
 # Create your views here.
+
+class BronCreateApiew(CreateAPIView):
+    queryset = BronModel.objects.all()
+    serializer_class = BronSerializers
