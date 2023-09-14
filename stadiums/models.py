@@ -1,6 +1,6 @@
 from django.db import models
 from django.core.validators import RegexValidator
-from datetime import datetime
+from datetime import datetime, timedelta
 from account.models import CustomUser
 
 
