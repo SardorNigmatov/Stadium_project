@@ -1,7 +1,6 @@
 from rest_framework.response import Response
-
 from .models import StadiumsModels, BronModel
-from .serializers import BronedListSerializer, BronSerializers, StadiumsSerializer
+from .serializers import  BronSerializers, StadiumsSerializer
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.generics import ListAPIView, CreateAPIView, \
     RetrieveAPIView, DestroyAPIView, UpdateAPIView
@@ -41,8 +40,12 @@ class BronCreateApiew(CreateAPIView):
 
 class BronedListView(ListAPIView):
     queryset = BronModel.objects.all()
-    serializer_class = BronedListSerializer
+    serializer_class = BronSerializers
 
 class BronedDeleteView(DestroyAPIView):
     queryset = BronModel.objects.all()
-    serializer_class = BronedListSerializer
+    serializer_class = BronSerializers
+
+class BronedUpdateView(UpdateAPIView):
+    queryset = BronModel.objects.all()
+    serializer_class = BronSerializers
