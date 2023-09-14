@@ -6,7 +6,7 @@ class StadiumAdmin(admin.ModelAdmin):
     search_fields = ['name','address']
 
 class BronAdmin(admin.ModelAdmin):
-    list_display = ('first_name','last_name','phone_number','begin_time','end_time','is_broned','date')
+    list_display = ('first_name','last_name','phone_number','begin_time','end_time','date')
 
 admin.site.register(StadiumsModels,StadiumAdmin)
 admin.site.register(BronModel,BronAdmin)
