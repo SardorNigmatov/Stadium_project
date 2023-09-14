@@ -24,6 +24,7 @@ class StadiumsModels(models.Model):
     stadium_about = models.CharField(max_length=250)
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
 
+
     def __str__(self) -> str:
         return self.name
 
