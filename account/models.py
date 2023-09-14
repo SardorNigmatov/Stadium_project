@@ -18,7 +18,8 @@ class CustomUser(AbstractUser):
     ),],)
     
     CHOISE_ROLES = (
-        (2, 'admin'),
+        (3,'admin'),
+        (2, 'owner'),
         (1, 'user')
     )
     roles = models.PositiveSmallIntegerField(default=1, choices=CHOISE_ROLES)
