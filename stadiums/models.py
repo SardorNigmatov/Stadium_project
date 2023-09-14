@@ -47,3 +47,9 @@ class BronModel(models.Model):
     begin_time = models.TimeField(default=datetime.now)
     end_time = models.TimeField(default=datetime.now)
     is_broned = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.first_name
+
+    class Meta:
+        db_table = 'Bron'
