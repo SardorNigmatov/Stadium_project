@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'rest_framework',
 ]
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -62,6 +63,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+AUTH_USER_MODEL = 'account.CustomUser'
 ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
