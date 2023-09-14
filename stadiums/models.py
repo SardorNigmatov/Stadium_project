@@ -21,6 +21,8 @@ class StadiumsModels(models.Model):
       )
     img = models.ImageField(upload_to='news/',blank=True,null=True)
     stadium_about = models.CharField(max_length=250)
+  
+    
     def __str__(self) -> str:
         return self.name
 
