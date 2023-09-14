@@ -1,6 +1,6 @@
 from rest_framework.response import Response
 from .models import StadiumsModels, BronModel
-from .serializers import  BronSerializers, StadiumsSerializer
+from .serializers import BronSerializers, StadiumsSerializer
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.generics import ListAPIView, CreateAPIView, \
     RetrieveAPIView, DestroyAPIView, UpdateAPIView
@@ -36,6 +36,7 @@ class DeleteStadiumsView(DestroyAPIView):
 class BronCreateApiew(CreateAPIView):
     queryset = BronModel.objects.all()
     serializer_class = BronSerializers
+    permission_classes = (IsAuthenticated,)
 
 
 class BronedListView(ListAPIView):
