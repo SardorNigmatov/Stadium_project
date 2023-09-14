@@ -7,7 +7,7 @@ from .views import (BronCreateApiew,
                     DeleteStadiumsView,
                     BronedListView,
                     BronedDeleteView,
-                    BronedUpdateView,)
+                    BronedUpdateView)
 
 
 urlpatterns = [
