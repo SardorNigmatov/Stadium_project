@@ -16,17 +16,17 @@ class DetailStadiumsView(RetrieveAPIView):
 class CreateStadiumsView(CreateAPIView):
     queryset = StadiumsModels.objects.all()
     serializer_class = StadiumsSerializer
-    permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
 
 class UpdateStadiumsView(UpdateAPIView):
     queryset = StadiumsModels.objects.all()
     serializer_class = StadiumsSerializer
-    permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
 
 class DeleteStadiumsView(DestroyAPIView):
     queryset = StadiumsModels.objects.all()
     serializer_class = StadiumsSerializer
-    permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
 
 
 # Create your views here.
