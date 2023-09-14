@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'django',
     'rest_framework',
     'rest_framework_simplejwt',
+    'drf_yasg',
+
 ]
 
 
@@ -103,7 +105,22 @@ DATABASES = {
         'PORT': config.get("PORT"),
     }
 }
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSIONS_CLASSES':[
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+       ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 4
+}
 
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

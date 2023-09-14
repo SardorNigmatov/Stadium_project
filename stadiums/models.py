@@ -9,6 +9,7 @@ from account.models import CustomUser
 class StadiumsModels(models.Model):
     name = models.CharField(max_length=50)
     address = models.CharField(max_length=300)
+    one_hour_price = models.FloatField(default=0)
     contact =  models.CharField(
         max_length=16,
         blank=True,
