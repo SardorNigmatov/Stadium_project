@@ -8,15 +8,19 @@ class StadiumsSerializer(ModelSerializer):
     class Meta:
         model = StadiumsModels
         fields = ('name','address','contact','img','stadium_about')
-        
-        
-        def create(self, validated_data):
+    
+    def create(self, validated_data):
             print(self.context['request'].user.id)
             validated_data['user'] = get_object_or_404(CustomUser, id=self.context['request'].user.id)
             return super(StadiumsSerializer,self).create(validated_data)
-        
-        
-        
+
+
+class BronSerializers(ModelSerializer):
+    class Meta:
+        model = BronModel
+        fields = ('first_name','last_name','phone_number','begin_time','end_time','is_broned','date')
+
+
 
 # class BrondDelSerilaizer(serializers.ModelSerializer):
 #     class Meta:
@@ -24,4 +28,3 @@ class StadiumsSerializer(ModelSerializer):
 #         fields = ('stadion_id','first_name','last_name','phone_number','date','begin_time','end_time','is_broned')
         
 #     def delete(self, validat_data):
-        
