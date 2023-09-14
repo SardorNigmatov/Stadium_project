@@ -22,6 +22,7 @@ class StadiumsModels(models.Model):
       )
     img = models.ImageField(upload_to='news/',blank=True,null=True)
     stadium_about = models.CharField(max_length=250)
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
 
 
     def __str__(self) -> str:
@@ -49,6 +50,7 @@ class BronModel(models.Model):
     date = models.DateField()
     begin_time = models.TimeField(default=datetime.now)
     end_time = models.TimeField(default=datetime.now)
+    is_broned = models.BooleanField(default=False)
 
     def __str__(self):
         return self.first_name
