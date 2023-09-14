@@ -20,6 +20,6 @@ class BronSerializers(ModelSerializer):
         fields = ('first_name','last_name','phone_number','begin_time','end_time','stadion_id','date','is_broned')
         
     # def create(self, validated_data):
-    #     # print(self.context['request'])
+    #     # print(self.context['request'])/
     #     validated_data['stadion_id'] = get_object_or_404(StadiumsModels, user=self.context['request'].user)
     #     return super(BronSerializers,self).create(validated_data)
